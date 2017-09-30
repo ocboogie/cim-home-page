@@ -1,0 +1,26 @@
+/* Custom page header */
+.container {
+    padding-bottom: 1rem;
+    border-bottom: .05rem solid #e5e5e5;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+/* Make the masthead heading the same height as the navigation */
+.container h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 3rem;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 48em) {
+  /* Remove the padding we set earlier */
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .container {
+    margin-bottom: 2rem;
+  }
+}

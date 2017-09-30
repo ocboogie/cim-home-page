@@ -1,0 +1,15 @@
+/* Main marketing message and sign up button */
+.container {
+    text-align: center;
+    border-bottom: .05rem solid #e5e5e5;
+}
+.container .btn {
+    padding: .75rem 1.5rem;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+    .container {
+        border-bottom: 0;
+    }
+}
