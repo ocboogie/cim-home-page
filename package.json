@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
+    "highlight.js": "^9.12.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2"
@@ -22,7 +23,9 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
     "file-loader": "^0.11.2",
-    "react-markdown-loader": "^1.1.12",
+    "highlight-loader": "^0.7.2",
+    "html-loader": "^0.5.1",
+    "markdown-loader": "^2.0.1",
     "style-loader": "^0.18.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.9",

@@ -116,8 +116,9 @@ module.exports = {
             {
                 test: /\.md$/,
                 use: [
-                    'babel-loader',
-                    'react-markdown-loader'
+                    'html-loader',
+                    'highlight-loader',
+                    'markdown-loader'
                 ]
             }
         ]
@@ -129,6 +130,10 @@ module.exports = {
             'window.jQuery': 'jquery',
             Tether: 'tether'
         }),
-        new UglifyJSPlugin()
+        new UglifyJSPlugin(),
+        new webpack.ContextReplacementPlugin(
+            /highlight\.js\/lib\/languages$/,
+            new RegExp(`^./(${['javascript'].join('|')})$`)
+        )
     ]
 };

@@ -2,9 +2,10 @@ import React from 'react';
 
 import Jumbotron from '../../components/Jumbotron';
 import Collapse from '../../components/Collapses';
-import BrieflyDefineTags from './brieflyDefineTags.md';
 import Card from '../../components/Card';
 import Cards from '../../components/Cards';
+import MD from '../../components/MD';
+import brieflyDefineTags from './questions/brieflyDefineTags.md';
 
 export default {
     title: 'H3 -Tag Review & Basic HTML Validation Week 2',
@@ -30,7 +31,7 @@ export default {
             {
                 title: 'Briefly define the following tags: p, strong, table, td, tr, div, span, body, head, title, html, ul, ol and li.',
 
-                body: <BrieflyDefineTags />
+                body: <MD md={brieflyDefineTags}/>
             }
         ];
 

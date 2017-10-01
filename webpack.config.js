@@ -120,8 +120,9 @@ module.exports = {
             {
                 test: /\.md$/,
                 use: [
-                    'babel-loader',
-                    'react-markdown-loader'
+                    'html-loader',
+                    'highlight-loader',
+                    'markdown-loader'
                 ]
             }
         ]
@@ -142,7 +143,11 @@ module.exports = {
                     'react-router-dom'
                 ]
             }
-        })
+        }),
+        new webpack.ContextReplacementPlugin(
+            /highlight\.js\/lib\/languages$/,
+            new RegExp(`^./(${['javascript'].join('|')})$`)
+        )
     ],
     devServer: {
         port,

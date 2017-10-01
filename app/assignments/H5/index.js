@@ -3,6 +3,11 @@ import React from 'react';
 import Jumbotron from '../../components/Jumbotron';
 import Collapse from '../../components/Collapses';
 import Cards from '../../components/Cards';
+import MD from '../../components/MD';
+
+import singleLineComment from './questions/singleLineComment.md';
+import WIAEHF from './questions/WIAEHF.md';
+import WIAI from './questions/WIAI.md';
 
 export default {
     title: 'H5 Chapter 1 Intro JavaScript Week 3',
@@ -31,28 +36,18 @@ export default {
             },
             {
                 title: 'How do you create a single-line comment in JavaScript?',
-
-                body: <div>Just a simple double forward slash: <code>console.log("Not commented") // line comment</code>. It's often recommended to put a space after the double forward slash</div>
+                
+                body: <MD md={singleLineComment} />
             },
             {
                 title: 'What is an identifier?',
 
-                body: <div>Identifiers are names. Identifiers are used to name variables, keywords, functions and labels. Identifiers may consist of letters, digits(not as the first character), underscores, or dollar signs. All of the following are identifier:<br /><code>
-                    function variableIdentifier() {"{}"} // "function" is an identifier as well<br />
-                    var variableIdentifier = null; // "var" is also an identifier<br />
-                    labelIdentifier: {"{}"}<br />
-                </code></div>
+                body: <MD md={WIAI} />
             },
             {
                 title: 'What is an event handler for?',
 
-                body: <div>An event handler is an action of some sort that executes when an event happens. All of the following are event handlers:<br/><code>
-                        {"<button onclick=\"alert('A button was pressed')\">This is a button</button>"}<br />
-                        // The following is Javascript with jQuery<br/>
-                        $("button").click(function eventHandler(e) {"{"}<br/>
-                            alert(e + " was pressed");<br/>
-                        {"}"});
-                </code></div>
+                body: <MD md={WIAEHF} />
             }
         ];
 
