@@ -13,8 +13,8 @@ export default {
                 title: 'What are Spider Monkey, Nashorn and Chrome\'s V8.',
 
                 body: <div>
-                    These three are javascript engines; they're what the browser uses to interpret
-                    Javascript code. They're pretty much what give Javascript code meaning.
+                    These are javascript engines; they're what the browser uses to interpret
+                    Javascript code. They're pretty much what gives Javascript code meaning.
                     <table className="table">
                         <thead>
                             <tr>
@@ -88,7 +88,7 @@ export default {
                             Not exclusively on the <code>Document</code> interface, but <code>Document</code> extends <code>ParentNode</code>
                         </li>
                     </ul>
-                    Most of these are rewritten versions of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Mozilla docs</a>
+                    Source: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Mozilla docs</a>
                 </div>
             }
         ];
@@ -96,7 +96,7 @@ export default {
         const assignments = [
             {
                 title: 'Create an HTML file with Hello World and your initials using JavaScript',
-                body: <div>Download the file <a href="assets/hello.html" download>here</a></div>
+                body: <div><a href="assets/H4/hello.html">Here</a> is the link to the file</div>
             }
         ];
 

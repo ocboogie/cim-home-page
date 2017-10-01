@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+      JavaScript 6th Edition
+      Chapter 1
+      Hands-on Project 1-1
+
+      Author: Eamon "boogie" mikulec
+      Date:   9/30/17
+
+      Filename: index.htm
+   -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Hands-on Project 1-1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Hands-on Project 1-1
+        </h1>
+    </header>
+    <article>
+        <h2>Financial Planning Tips</h2>
+        <script>
+            var myWay = true;
+            // I think it would be better to make a string, then do "document.write"
+            // So you don't have to do multiple "document.write"s
+            if (myWay) {
+                var elements = [
+                    "<ol>",
+                    "<li>Reduce spending on non-necessities.</li>",
+                    "<li>Use extra money yo pay off debt, starting with highest-interest vredit card.</li>",
+                    "<li>Continue paying off debts until you are debt free.</li>",
+                    "<li>Put a fixed percent of your pay aside in savings every payday.</li>",
+                    "</ol>"
+                ].join("");
+                document.write(elements);
+            } else {
+                document.write("<ol>");
+                document.write("<li>Reduce spending on non-necessities.</li>");
+                document.write("<li>Use extra money yo pay off debt, starting with highest-interest vredit card.</li>");
+                document.write("<li>Continue paying off debts until you are debt free.</li>");
+                document.write("<li>Put a fixed percent of your pay aside in savings every payday.</li>");
+                document.write("</ol>");
+            }
+        </script>
+    </article>
+</body>
+
+</html>

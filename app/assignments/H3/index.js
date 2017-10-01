@@ -44,7 +44,7 @@ export default {
             },
             {
                 title: 'Create an HTML file, that has a table with three columns, column',
-                body: <div>Download the file <a href="assets/table.html" download>here</a></div>
+                body: <div><a href="assets/H3/table.html">Here</a> is the link to the file</div>
             }
         ];
 
