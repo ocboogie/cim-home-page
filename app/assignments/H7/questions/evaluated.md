@@ -1,0 +1,1 @@
+`5 + 2 * 8` is evaluated as `5 + (2 * 8)` so `5 + 16` because `*` has a higher precedence order than `+`, so `+` is evaluated last.

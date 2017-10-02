@@ -215,7 +215,7 @@ form label p:nth-child(2) {
    font-size: 0.8em;
 }
 
-form input {
+form input, form button {
    padding: 1%;
    background: #333;
    color: #BBB;

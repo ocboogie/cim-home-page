@@ -26,7 +26,7 @@ export default {
             {
                 title: 'How do you check JavaScript errors in a browser?',
 
-                body: 'There are several different ways to do this, like using an extension for example. The most universal way is ctrl+shift+i > console. The errors should be logged there.'
+                body: 'There are several different ways to do this, like using an extension, for example. The most universal way is ctrl+shift+i > console. The errors should be logged there.'
             },
             {
                 title: 'JavaScript data types, What are the primary, composite and special JavaScript data types?',
@@ -37,7 +37,7 @@ export default {
         const assignments = [
             {
                 title: 'Complete digital.htm on pages 94-96.',
-                body: <div><a href="assets/H6/digital">Here</a> is the link to the file</div>
+                body: <div><a href="assets/H6-H7/Chapter/digital.html">Here</a> is the link to the file</div>
             },
             {
                 title: 'Complete hands on project 1-2.',
