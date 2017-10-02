@@ -1,5 +1,7 @@
 import React from 'react';
 
+import style from './Collapses.css';
+
 let indexId = 0;
 
 export default (props) => {
@@ -14,7 +16,7 @@ export default (props) => {
                 </h5>
             </div>
             <div id={`collapse${index}-${id}`} className="collapse" role="tabpanel" data-parent={`#accordion${indexId}`}>
-                <div className="card-body">
+                <div className={"card-body " + style.container}>
                     {item.body}
                 </div>
             </div>

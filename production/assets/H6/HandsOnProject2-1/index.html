@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--
+      JavaScript 6th Edition
+      Chapter 2
+      Hands-on Project 2-1
+
+      Author: Eamon "Boogie" Mikulec
+      Date:   10/1/17
+
+      Filename: index.htm
+   -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Hands-on Project 2-1</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>
+      Hands-on Project 2-1
+    </h1>
+  </header>
+
+  <article>
+    <h2>Fahrenheit (&#176; F), Kelvin (&#176; K) and Celsius (&#176; C) converter</h2>
+    <form>
+      <fieldset>
+        <label for="fValue">
+          Enter temp in &#176; F
+        </label>
+        <input type="number" id="fValue" />
+      </fieldset>
+      <fieldset>
+        <label for="kValue">
+          Enter temp in &#176; K
+        </label>
+        <input type="number" id="kValue" />
+      </fieldset>
+      <fieldset>
+        <label for="cValue">
+          Enter temp in &#176; C
+        </label>
+        <input type="number" id="cValue" />
+      </fieldset>
+    </form>
+  </article>
+  <script>
+    // Got a bit carried away
+    // and the "value - 0" is to tell javascript this is a number 
+    // not a string so don't concatenate this
+    var fValue = document.getElementById('fValue');
+    var kValue = document.getElementById('kValue');
+    var cValue = document.getElementById('cValue');
+    fValue.addEventListener("input", function () {
+      cValue.value = ((fValue.value - 32) * (5/9)).toFixed(3);
+      kValue.value = (((fValue.value - 0) + 459.67) * (5/9)).toFixed(3);
+    });
+    kValue.addEventListener("input", function () {
+      fValue.value = (kValue.value * 9 / 5 - 459.67).toFixed(3);
+      cValue.value = (kValue.value - 273.15).toFixed(3);
+    });
+    cValue.addEventListener("input", function () {
+      fValue.value = (cValue.value * 9 / 5 + 32).toFixed(3);
+      kValue.value = ((cValue.value - 0) + 273.15).toFixed(3);
+    });
+  </script>
+</body>
+
+</html>
