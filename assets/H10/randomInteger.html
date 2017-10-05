@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 Random Integer</title>
+</head>
+
+<body>
+    <h3>Random numbers:</h3>
+    <ul id="randNum"></ul>
+    <h3>Sorted random numbers:</h3>
+    <ul id="sortRandNum"></ul>
+    <h3>Average: <span id="average"></span>.</h3>
+    <h3>Median: <span id="median"></span>.</h3>
+    <h4>All of this is also logged in the console.</h4>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script>
+        // Constants
+        var MAX = 1000;
+        var MIN = 0;
+        var LIST_SIZE = 10;
+
+        var randNumList = $("#randNum");
+        var sortRandNumList = $("#sortRandNum");
+        var averageElem = $("#average");
+        var medianElem = $("#median");
+
+        var numbers = [];
+        for (var i = 0; i < LIST_SIZE; i++) {
+            var number = Math.floor(Math.random() * ((MAX + 1) - MIN) + MIN);
+            numbers.push(number);
+            randNumList.append("<li>" + number + "</li>");
+        }
+        console.log("Unsorted array: " + numbers);
+        
+        numbers.sort(function (a, b) {
+            return a - b;
+        });
+        for (var i in numbers) {
+            sortRandNumList.append("<li>" + numbers[i] + "</li>");
+        }
+        console.log("Sorted array: " + numbers);
+
+        var sum = numbers.reduce(function (previous, current) {
+            return current += previous
+        });
+        var avg = sum / numbers.length;
+        console.log("Average: " + avg);
+        averageElem.text(avg);
+
+        var lowMiddle = Math.floor((numbers.length - 1) / 2);
+        var highMiddle = Math.ceil((numbers.length - 1) / 2);
+        var median = (numbers[lowMiddle] + numbers[highMiddle]) / 2;
+        console.log("Median: " + median);
+        medianElem.text(median);
+    </script>
+</body>
+
+</html>

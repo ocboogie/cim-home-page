@@ -25,8 +25,8 @@ A for loop is structured as follows `for ( ''initializer''; ''conditional expres
  var i = 0;
  var text = "";
  while (i < 10) {
-   text += "The number is " + i;
-   i++;
+    text += "The number is " + i;
+    i++;
  }
  ```
  * `do while`: a do while loop is the same as a while loop, but it checks the condition after running the code:

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--
+      JavaScript 6th Edition
+      Chapter 3
+      Hands-on Project 3-4
+
+      Author: Eamon "Boogie" Mikulec
+      Date:   10/3/17
+
+      Filename: index.htm
+   -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Hands-on Project 3-4</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>
+      Hands-on Project 3-4
+    </h1>
+  </header>
+
+  <article>
+    <div id="results">
+      <ul>
+      </ul>
+      <p id="resultsExpl"></p>
+    </div>
+    <form>
+      <fieldset>
+        <label for="toolBox" id="placeLabel">
+              Type the name of a tool, then click Submit:
+            </label>
+        <input type="text" id="toolBox" />
+      </fieldset>
+      <fieldset>
+        <button type="button" id="button">Submit</button>
+      </fieldset>
+    </form>
+  </article>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script>
+    var tools = $("#results > ul");
+    var inputBox = $("#toolBox");
+    var resultsExpl = $("#resultsExpl");
+    $("#button").click(function () {
+      var children = tools.children().length;
+      if (children < 5) {
+        tools.append("<li>" + inputBox.val() + "</li>");
+      }
+      if (children >= 4) {
+        resultsExpl.text("Thanks for your suggestions.");
+      }
+    });
+  </script>
+</body>
+
+</html>

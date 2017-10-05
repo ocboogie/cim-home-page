@@ -50,7 +50,7 @@ export default {
             {
                 title: 'Which repetition statement allows you to initialize a counter variable as part of its syntax?',
 
-                body: <div>A for loop</div>
+                body: <div>A <code>for</code> loop</div>
             },
             {
                 title: 'Briefly define the branching flow control structures if, if else and switch/case statement.',

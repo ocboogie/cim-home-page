@@ -1,4 +1,4 @@
- * `if`: a if statement will run the code in the body if the condition evaluates to true;
+ * `if`: a if statement will run the code in the body if the condition evaluates to true:
  ```js
  if (false) {
     console.log("This will never run");
@@ -10,7 +10,7 @@
     console.log("This will always run");
  }
  ```
- * `switch/case`: a switch statement will run the code in the body of a case, if the case is the same as the expression, if not then will run the default:
+ * `switch/case`: a switch statement will run the code in the body of a case if the case is the same as the expression. If not, then it will run the `default`:
  ```js
  switch (expr) {
   case 'Oranges':
