@@ -14,4 +14,5 @@ const obj = {};
 for (const item of list) {
     obj[item.id] = item;
 }
+
 export default obj;

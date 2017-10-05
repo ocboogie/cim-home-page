@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Jumbotron from '../../components/Jumbotron';
 import Collapse from '../../components/Collapses';
 import Cards from '../../components/Cards';
 import MD from '../../components/MD';
+
 import windowAlert from './questions/windowAlert.md';
 import consoleObject from './questions/consoleObject.md';
 import RWD from './questions/RWD.md';
@@ -11,7 +11,7 @@ import RWD from './questions/RWD.md';
 export default {
     title: 'H10 Chapter 4 Debugger & Array Review',
     id: 'h10',
-    element: props => {
+    element: () => {
         const questions = [
             {
                 title: 'How is window.alert useful in debugging?',

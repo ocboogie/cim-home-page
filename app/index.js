@@ -4,7 +4,7 @@ import 'bootstrap';
 import javascript from 'highlight.js/lib/languages/javascript';
 import hljs from 'highlight.js/lib/highlight';
 
-import Routes from './routes';
+import Routes from './Routes';
 import './styles.global.css';
 
 hljs.registerLanguage('javascript', javascript);
@@ -12,4 +12,4 @@ hljs.registerLanguage('javascript', javascript);
 render(
     <Routes />,
     document.getElementById('root')
-)
+);

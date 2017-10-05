@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Jumbotron from '../../components/Jumbotron';
 import Collapse from '../../components/Collapses';
 import Cards from '../../components/Cards';
 import MD from '../../components/MD';
+
 import bonusPoints from './questions/bonusPoints.md';
 
 export default {
     title: 'H9 Chapter 3 Extra Assignments Week 4',
     id: 'h9',
-    element: props => {
+    element: () => {
         const assignments = [
             {
                 title: 'Complete hands On Project 3-1 Page 205',

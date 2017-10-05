@@ -141,8 +141,7 @@ module.exports = {
                     'react',
                     'react-dom',
                     'react-router-dom',
-                    'highlight.js',
-                    'bootstrap'
+                    'highlight.js'
                 ]
             }
         }),

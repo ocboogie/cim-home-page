@@ -1,13 +1,12 @@
 import React from 'react';
 
-import Jumbotron from '../../components/Jumbotron';
 import Collapse from '../../components/Collapses';
 import Cards from '../../components/Cards';
 
 export default {
     title: 'H4 JavaScript Engines, API and Document object Week 3 ',
     id: 'h4',
-    element: props => {
+    element: () => {
         const questions = [
             {
                 title: 'What are Spider Monkey, Nashorn and Chrome\'s V8.',

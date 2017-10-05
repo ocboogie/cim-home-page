@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Jumbotron from '../../components/Jumbotron';
 import Collapse from '../../components/Collapses';
 import Cards from '../../components/Cards';
 import MD from '../../components/MD';
@@ -12,7 +11,7 @@ import WIAI from './questions/WIAI.md';
 export default {
     title: 'H5 Chapter 1 Intro JavaScript Week 3',
     id: 'h5',
-    element: props => {
+    element: () => {
         const questions = [
             {
                 title: 'What is a URL?',
@@ -36,7 +35,7 @@ export default {
             },
             {
                 title: 'How do you create a single-line comment in JavaScript?',
-                
+
                 body: <MD md={singleLineComment} />
             },
             {

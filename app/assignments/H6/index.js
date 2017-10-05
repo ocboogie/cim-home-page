@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Jumbotron from '../../components/Jumbotron';
 import Collapse from '../../components/Collapses';
 import Cards from '../../components/Cards';
 import MD from '../../components/MD';
+
 import NFAAF from './questions/NFAAF.md';
 import useAnonymousFunctions from './questions/useAnonymousFunctions.md';
 import dataTypes from './questions/dataTypes.md';
@@ -11,7 +11,7 @@ import dataTypes from './questions/dataTypes.md';
 export default {
     title: 'H6 Chapter 2 Intro JavaScript data types, operators, expressions. Week 3',
     id: 'h6',
-    element: props => {
+    element: () => {
         const questions = [
             {
                 title: 'What is the difference between a named function and anonymous function?',

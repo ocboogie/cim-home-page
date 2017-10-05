@@ -1,0 +1,76 @@
+{
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module",
+        "allowImportExportEverywhere": true
+    },
+    "extends": [
+        "airbnb"
+    ],
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "rules": {
+        "max-len": "off",
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "consistent-return": "error",
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        "generator-star-spacing": "off",
+        "import/no-unresolved": "error",
+        "import/no-extraneous-dependencies": "off",
+        "import/order": [
+            "error",
+            {
+                "newlines-between": "always"
+            }
+        ],
+        "no-console": "off",
+        "react/jsx-filename-extension": [
+            "error",
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "react/prefer-stateless-function": "off",
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/no-unescaped-entities": "off",
+        "react/prop-types": "off",
+        "jsx-a11y/href-no-hash": "off",
+        "jsx-a11y/anchor-is-valid": [
+            "warn",
+            {
+                "aspects": [
+                    "invalidHref"
+                ]
+            }
+        ],
+        "no-restricted-syntax": "off"
+    },
+    "plugins": [
+        "import",
+        "react"
+    ],
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": "./webpack.config.js"
+            }
+        }
+    }
+}

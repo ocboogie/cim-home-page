@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Jumbotron from '../../components/Jumbotron';
 import Collapse from '../../components/Collapses';
 import Cards from '../../components/Cards';
 import MD from '../../components/MD';
+
 import individualElement from './questions/individualElement.md';
 import length from './questions/length.md';
 import browserLength from './questions/browserLength.md';
@@ -15,7 +15,7 @@ import ifSwitch from './questions/ifSwitch.md';
 export default {
     title: 'H8 Chapter 3 JavaScript Array Object and Control Structures, jQuery example Week 4',
     id: 'h8',
-    element: props => {
+    element: () => {
         const questions = [
             {
                 title: 'How do you access an individual element in an array?',
@@ -56,7 +56,7 @@ export default {
                 title: 'Briefly define the branching flow control structures if, if else and switch/case statement.',
 
                 body: <MD md={ifSwitch} />
-            },
+            }
         ];
         const assignments = [
             {

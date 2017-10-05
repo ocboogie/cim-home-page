@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Jumbotron from '../../components/Jumbotron';
 import Collapse from '../../components/Collapses';
 import Cards from '../../components/Cards';
 import MD from '../../components/MD';
+
 import evaluated from './questions/evaluated.md';
 import select from './questions/select.md';
 import jQueryChaining from './questions/jQueryChaining.md';
@@ -12,7 +12,7 @@ import avoidWrite from './questions/avoidWrite.md';
 export default {
     title: 'H7 Chapter 2 Comparison and Conditional Operators, jQuery Example Week 3',
     id: 'h7',
-    element: props => {
+    element: () => {
         const questions = [
             {
                 title: 'What is a comparison operator? What kind of values does it return?',
@@ -55,7 +55,7 @@ export default {
                 title: 'Rewrite estimate1.htm to jQuery on your own or as done in webcast (steps outline at end of this assignment)',
                 body: <div><a href="assets/H6-H7/Chapter/estimatejQuery.html">Here</a> is the link to the file</div>
 
-            },
+            }
         ];
 
         const CardData = [
