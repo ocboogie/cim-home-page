@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+    <style>
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="GET" name="form1" action="http://cim.saddleback.edu/~jstudent0/formData.php" onsubmit="return validateForm()">
+        <label for="firstName">First name</label>
+        <input required id="firstName" name="firstName" type="text" pattern="^[A-Z][a-z]+$" />
+        <br />
+        <label for="lastName">Last name</label>
+        <input required name="lastName" type="text" pattern="^[A-Z]{1,2}(\.\s?|')?[a-z]+$" />
+        <br />
+        <label for="email1">Email</label>
+        <input required name="email1" type="email" />
+        <br />
+        <label for="email2">Email again</label>
+        <input required name="email2" type="email" />
+        <br />
+        <label for="zipCode">Zip code</label>
+        <input required name="zipCode" type="text" pattern="[0-9]{5}" />
+        <br />
+        <label for="age">Age</label>
+        <input required name="age" type="number" min="12" max="140" />
+        <br />
+        <label for="phoneNumber">Phone Number</label>
+        <input required name="phoneNumber" type="tel" pattern="^\d{4}-\d{3}-\d{4}$" />
+        <br />
+        <label for="employment">Employment</label>
+        <select name="employment">
+            <option value="college">College</option>
+            <option value="fullTime">Full-time</option>
+            <option value="partTime">Part-time</option>
+        </select>
+        <br />
+        <br />
+        <input name="submit" type="submit" />
+
+        <div id="hello"></div>
+    </form>
+
+    <script>
+        var hello;
+        var form;
+        function eventPolyfill(elem, eventName, eventHandler) {
+            if (elem) {
+                if (elem.addEventListener) {
+                    elem.addEventListener(eventName, eventHandler);
+                } else if (elem.attachEvent) {
+                    elem.attachEvent("on" + eventName, eventHandler);
+                }
+            }
+        }
+
+        eventPolyfill(window, "load", function () {
+            form = document.forms["form1"];
+            hello = document.getElementById("hello");
+            eventPolyfill(form.firstName, "focusout", function (e) {
+                hello.innerHTML = "Hello " + e.target.value;
+            });
+            eventPolyfill(form.email2, "focusout", function (e) {
+                if (form.email1.value !== form.email2.value) {
+                    alert("Emails must match");
+                    return false;
+                }
+            });
+        });
+
+        function validateForm() {
+            if (form.email1.value !== form.email2.value) {
+                alert("Emails must match");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
