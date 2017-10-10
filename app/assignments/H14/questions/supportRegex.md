@@ -1,1 +1,1 @@
-Most languages these days support regex, if they don't, there's a high chance that someone made a library/module.
+Most languages these days support regex. If they don't; there's a high chance that someone made a library/module.
