@@ -7,6 +7,9 @@ body {
   padding-bottom: 1.5rem;
 }
 
+.hljs {
+    background-color: #f6f8fa;
+}
 
 table {
     /* Remove spacing between table cells (from Normalize.css) */

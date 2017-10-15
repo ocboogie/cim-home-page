@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>J2 Selector Easy Table</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style></style>
+  <style>
+    body {
+      color: #000000;
+      background-color: #FFFFFF;
+    }
+
+    table {
+      width: 90%;
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+
+    td {
+      border: 2px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Key points for
+    <span class="jQuery">jQuery</span>....</p>
+  <ul>
+    <li>Need to first load a specific
+      <span class="jQuery">jQuery</span> versions using a
+      <span id="cdn">CDN</span>
+    </li>
+    <li id="jQueryObject">The
+      <span class="jQuery">jQuery</span> object is then available, it uses the identifier name $.</li>
+    <li>When used in an identifier, $ is treated as a letter, but it is reserved for special purposes.</li>
+    <li>Other typical identifiers (aka variable names) are: myHightlight, bg, fg, $, str, border.</li>
+    <li>A
+      <span class="jQuery">jQuery</span> call consists of the $(
+      <span class="jQuery">jQuery</span>Selector ).methodName</li>
+    <li>Where the
+      <span class="jQuery">jQuery</span>Selector is a string based on standard CSS3 selectors</li>
+    <li>Basic CSS selectors can be a tag name such as li, ul, body, etc.</li>
+    <li>CSS selectors can also reference the HTML id attribute of a tag using #idName</li>
+    <li id="classSelector">CSS selectors can also reference a group of tags, using the HTML class atrribute using .className</li>
+  </ul>
+  <p>For J2, complete this webpage by filling in the blank cells in the next table..</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>&nbsp;</th>
+        <th>Description</th>
+        <th>Test Button</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Select the ul tag</td>
+        <td>
+          <input onclick="myHighlight( 'ul' )" value="highLight ul block" type="button">
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Select li tags</td>
+        <td>
+          <input onclick="myHighlight( 'li', 'orange')" value="orange" type="button">
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Select th tags</td>
+        <td>
+          <input onclick="myHighlight( 'th', 'purple')" value="purple" type="button">
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Select tr tags</td>
+        <td>
+          <input onclick="myHighlight( 'tr', 'maroon')" value="maroon" type="button">
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>select class="
+          <span class="jQuery">jQuery</span>"</td>
+        <td>
+          <input onclick="myHighlight( '.jQuery', 'blue', 'border 5px outset #ff0000' )" value="blue red highlight" type="button">
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Select id="cdn"</td>
+        <td>
+          <input onclick="myHighlight( '#cdn', 'green', 'border 5px outset #00ff00' )" value="green green highlight" type="button">
+        </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Select id="jQueryObject"</td>
+        <td>
+          <input onclick="myHighlight( '#jQueryObject', 'red', 'border 5px outset #00ff00' )" value="red green highlight" type="button">
+        </td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Select id="classSelector"</td>
+        <td>
+          <input onclick="myHighlight( '#classSelector', 'blue', 'border 5px outset #ff0000' )" value="blue red highlight" type="button">
+        </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Select table .jQuery</td>
+        <td>
+          <input onclick="myHighlight( 'table .jQuery', 'blue', 'border 5px outset #ffff00' )" value="blue yellow highlight" type="button">
+        </td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Select ul .jQuery</td>
+        <td>
+          <input onclick="myHighlight( 'ul .jQuery', '#ccc' )" value="gray highlight" type="button">
+        </td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Select body</td>
+        <td>
+          <input onclick="myHighlight( 'body', 'red' )" value="red background" type="button">
+        </td>
+
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>contains text HTML - first pages of
+          <a href="http://ptgmedia.pearsoncmg.com/images/9780321885142/samplepages/0321885147.pdf">PDF first 59 Pages.</a>
+        </td>
+        <td>
+          <input onclick="myHighlight( '[p~=HTML]', 'darkred' )" value="darkred background" type="button">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>To complete the table create the test buttons for items 2 to 8 and fill in the description for items 9 to 11. You may need
+    to click twice to see the effect, the myHighlight function works as a toggle.</p>
+  <p>You can use the
+    <a href="https://jsfiddle.net/tdedonno/pvL0hds1/">corresponding jsFiddle</a>, for help.</p>
+  <br>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+    if (typeof jQuery === "undefined") {
+      var msg = "Unable to load jQuery";
+      window.status = msg; //deprecated in recent browsers
+      console.log(msg);
+      document.write(msg + " you may need a cdn with same access or local files");
+    } else console.log("jQuery loaded successful"); //console must be up
+
+
+    if (typeof jQuery != "undefined") {
+      //console.log not working in this block?
+
+      $(document).ready(
+
+
+        /**
+             selector is the standard CSS sizzle selector string
+           rgb is the desired background color default yello
+           border is the desired border default 3px solid lime
+        */
+
+        myHighlight = function (selector, rgb, border) {
+
+          //in chrome yu cannot set formal parameters with defaults
+          if (typeof rgb === "undefined") rgb = "#ff0"; //set default yellow
+
+          if (typeof border === "undefined") border = "3px solid lime";
+
+          var bg = $(selector).css("background-color");
+
+          //on browser an unset background is set to transparent		  
+          if (bg === 'transparent' || /^rgba/.test(bg)) {
+            $(selector + ":first").css("border-top", border);
+            $(selector + ":last").css("border-bottom", border);
+            $(selector).css({ "border-right": border, "border-left": border });
+            $(selector).css("background-color", rgb);
+          }
+          else {
+            //reset background to transparent, borders to none
+            $(selector + ":first").css("border-top", "none");
+            $(selector + ":last").css("border-bottom", "none");
+            $(selector).css({ "border-right": "none", "border-left": "none" });
+            $(selector).css("background-color", "transparent");
+          }
+        } //end myHighlight
+
+        //can use call back functions
+
+
+      );
+    } //end if jquery is defined
+
+  </script>
+
+
+</body>
+
+</html>

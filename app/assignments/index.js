@@ -9,8 +9,11 @@ import H10 from './H10';
 import H13 from './H13';
 import H14 from './H14';
 import H15 from './H15';
+import J1 from './J1';
+import J2 from './J2';
+import J3 from './J3';
 
-const list = [H3, H4, H5, H6, H7, H8, H9, H10, H13, H14, H15];
+const list = [H3, H4, H5, H6, H7, H8, H9, H10, H13, H14, H15, J1, J2, J3];
 
 const obj = {};
 

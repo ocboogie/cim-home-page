@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style></style>
+  <style>
+    body {
+      color: #000000;
+      background-color: #FFFFFF;
+    }
+  </style>
+  <title>Selector Table</title>
+</head>
+
+<body>
+  <table style="width:90%; border:1px;" id="jQuerySelectors" border="1">
+    <caption>
+
+    </caption>
+    <tbody>
+      <tr>
+        <th colspan="5">
+          <a id="jQueryPageSelector"></a>jQuery Selector Table
+          <input id="getRGB" value="Get Colors" onclick="getRGB();" type="button">
+        </th>
+      </tr>
+      <tr>
+        <td colspan="5">
+          <form action="xxx">
+            <fieldset style="border:medium solid blue">
+              <legend style="border:medium solid blue;">Testing Area</legend>
+              <div id="testingArea">jQuery has become the most popular
+                <span>JavaScript</span> framework. A framework is an enhanced/mature
+                <span>JavaScript</span> library, that simplifies the most used
+                <span>JavaScript</span> tasks.
+                <p>For example, jQuery uses the sizzle engine to simplify the selection of DOM elements. In standard,
+                  <span>JavaScript</span>
+                  a programmer uses either getElementById or getElementByTabName, but with jQuery the programmer has simpler selection mechanism.
+                  They simply use the jQuery object $, followed by a CSS selector in parenthesis, for example
+                  <em id="story1">to select the element with ID of story1, one just uses $("#story1").</em> Not only does sizzle simplify
+                  <span>JavaScript</span> tag selection, but with the method css, one can set CSS properties rather than having
+                  to use the
+                  <span>JavaScript</span>
+                  <a href="http://www.w3schools.com/jsref/dom_obj_style.asp">style object</a>. Full
+                  <a href="https://jsfiddle.net/tdedonno/mb884xd3/">jsFiddle1 Version</a> - of entire assignment,</p>
+              </div>
+            </fieldset>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <span>Write JavaScript</span> pseudo code for setting selected element(s) to red foreground.</td>
+        <td class="cssColumn">
+          <p>CSS
+            <br> Selector </p>
+        </td>
+        <td>Button w onclick function call</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>selectID = function( id ) {return document.getElementById( id );}
+          <br> selectID( "story1" ).style.color = 'red';</td>
+        <td class="cssColumn">ID #story1</td>
+        <td>
+          <input value="$( &quot;#story1&quot;)" onclick="myInvert( '#story1' )" type="button">
+        </td>
+        <td>Find Content w id="story1"</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>selectID( "testingArea").getElementsByTagName( "span" ).color = 'red';</td>
+        <td class="cssColumn">ID Descendant
+          <br> #testingArea span</td>
+        <td>
+          <input value="$('#testingArea span')" onclick="myInvert( '#testingArea span' )" type="button">
+        </td>
+        <td>will select all JavaScript span elements areas in #testingArea</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>
+          <pre>myChildNodes = function( element, childTag, color ) {
+    var x = element.childNodes;<br>    //nodeName return upper case tag names<br>    childTag = childTag.toUpperCase();
+    if( color == undefined ) color = 'red';<br>
+   for( i=0; i &lt; x.length; ++i )
+       if( x[i].nodeType == "1" &amp;&amp; x[i].nodeName == childTag )
+                 x[i].style.color = color;<br>} //<a href="https://jsfiddle.net/tdedonno/72z2pzr5/">jsFiddle3</a> for JavaScript Pseudo Code.</pre>
+        </td>
+        <td class="cssColumn">Child of ID
+          <br> #testingArea &gt; span</td>
+        <td>
+          <input value="$('#testingArea > span')" onclick="myInvert( '#testingArea > span' )" type="button">
+        </td>
+        <td>
+          <p>Select first 3 span tags, second two are grandchildren
+          </p>
+          <p>
+            <a href="https://jsfiddle.net/tdedonno/fq566oon/">jsFiddle2 for selection help</a>
+            <br>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Complete table, fill in all 4 columns, you can test all selectors using the exisitng functions: myInvert, myHighlight,
+          halloween, notHalloween. You have to write one more holiday theme button, you can use halloween as a template.
+        </td>
+        <td class="cssColumn">
+          <p>Grandchildren of ID
+            <br> #testingArea * &gt; span
+          </p>
+        </td>
+        <td>
+          <input value="$('#testingArea * > span')" onclick="myInvert( '#testingArea * > span' )" type="button">
+        </td>
+        <td>
+          <a href="https://jsfiddle.net/tdedonno/fq566oon/"></a>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>A sibling is a tag right after another tag, so in the #testingArea we have three span siblings of span, two in the
+          first paragraph and one in the second paragraph. -
+          <a href="https://jsfiddle.net/tdedonno/72z2pzr5/">jsFiddle3</a> for JavaScript pseudo code help.</td>
+        <td class="cssColumn">Tag Sibling
+          <br> #testingArea span + span</td>
+        <td>
+          <input value="$('#testingArea span + span')" onclick="myInvert( '#testingArea span + span' )" type="button">
+        </td>
+        <td>Select only sibling span tags in #testingArea</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>
+          <a href="https://jsfiddle.net/tdedonno/u4j8dmsg/">jsFiddle4</a>, simplified table, for testing table selectors.</td>
+        <td class="cssColumn">Tag Desccendant
+          <br> table span</td>
+        <td>
+          <input value="$('#querySelectors > span')" onclick="myInvert( '#querySelectors > span' )" type="button">
+        </td>
+        <td>span element is a child of #querySelectors, not just any descendant.</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>
+          <pre> x = document.getElmentsByTagName( "input" );
+ for( i=0; i &lt; x.length ; i++ )
+     x[i].style.backgroundColor = "blue";</pre>
+        </td>
+        <td class="cssColumn">Specific Input type
+          <br> input[type='button']
+        </td>
+        <td>
+          <input value="$('input[type=\'button\']')" onclick="myInvert('input[type=\'button\']')" type="button">
+        </td>
+        <td>jQuery input:button</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Just write code for selecting td.cssColumn</td>
+        <td class="cssColumn">tag class attribute
+          <br> td.cssColumn
+        </td>
+        <td>
+          <input onclick="myHighlight( 'td.cssColumn' );" title="default yellow" value="td.cssColumn" type="button">
+          <input onclick="myHighlight( 'td:nth-child( 3 )', '#cccccc', '2px outset blue' ); " title="gray background" value="td:nth-child(3)"
+            type="button">
+        </td>
+        <td>3rd column has class= cssColumn, You can also use the
+          <a href="https://css-tricks.com/useful-nth-child-recipies/">nth child selector</a>
+        </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Just try to write a JavaScript pseudo function, not you can use tr:first as jQuery selector</td>
+        <td class="cssColumn">first child of tag
+          <br> tr:first-child
+        </td>
+        <td>
+          <input value="$('tr:first-child')" onclick="myInvert('tr:first-child')" type="button">
+        </td>
+        <td>Apply to only the first column, (aa first child of tr td).</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>
+          <pre>function oddChildren( arg1 ) {
+         x = document.getElementsByTagName( arg1 );
+         y  = Array( );
+         for( i=0; i &lt; x.length; i += 2 )
+              	y[ i/2 ] = x[ i ];
+         return y; //this is an array of odd arg1 elements<br>         }
+oddChildren( "tr" ).foreach( function( e ) 
+            { e.style.color = "red"; } ):        </pre>
+        </td>
+        <td class="cssColumn">odd children
+          <a href="http://www.w3.org/Style/Examples/007/evenodd.en.html">
+            <br> tr:nth-child( odd )</a>
+        </td>
+        <td>
+          <input value="$('tr:nth-child(odd)')" onclick="myInvert('tr:nth-child(odd)')" type="button">
+        </td>
+        <td>Invert odd rows using the
+          <a href="http://api.jquery.com/odd-selector/">odd rows selectors</a>
+        </td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Write function evenChildren( arg1 )</td>
+        <td class="cssColumn">
+          <a href="http://www.w3.org/Style/Examples/007/evenodd.en.html" class="cssColumn">tr:nth-child( even)</a>
+        </td>
+        <td>
+          <input value="$('tr:nth-child(even)')" onclick="myInvert('tr:nth-child(even)')" type="button">
+        </td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>var tbl = document.getElementByTagName( "table")[0];
+          <br> tbl.
+          <a href="http://www.w3schools.com/jsref/dom_obj_style.asp">style</a>.color = "orange"; tbl.style.backgroundColor = "black";
+          <br> tbl.style.boxShadow ="5px 6px 5px 5px #aaa";
+          <br>
+        </td>
+        <td class="cssColumn">table</td>
+        <td>
+          <input onclick="halloween( 'table' );" id="halloween" value="table halloween" type="button">
+        </td>
+        <td>select tags: table, fieldset and legend</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Add your own selector example, You can use
+          <a href="http://www.w3schools.com/jquery/jquery_selectors.asp"> this page</a> as a guide.
+          <br> You also have to add another holiday theme.</td>
+        <td class="cssColumn">&nbsp;</td>
+        <td>
+          <input value="$('*')" onclick="myInvert('*')" type="button">
+        </td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>
+          <pre>trOdd = oddChildren( "tr" ); //using function on line 8;
+for( i=0; i &lt; trOdd.length; ++i )
+     Line9Function( trOdd[i] ).foreach( function( e )<br>          { MyInvert( e ); } );
+    </pre>
+        </td>
+        <td class="cssColumn">tr:odd td:nth-child(2n),
+          <br> tr:even td:nth-child( 2n+1);</td>
+        <td>
+          <input value="$('tr:odd td:nth-child(2n),tr:even td:nth-child( 2n+1)')" onclick="myInvert('tr:odd td:nth-child(2n),tr:even td:nth-child( 2n+1)')" type="button">
+        </td>
+        <td>Checker Board just use invert
+          <br> (note comma)</td>
+      </tr>
+    </tbody>
+  </table>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="selectorTable.js" type="text/javascript"></script>
+
+</body>
+
+</html>
