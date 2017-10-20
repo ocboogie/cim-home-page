@@ -6,7 +6,7 @@ import MD from '../../components/MD';
 
 import traverse from './questions/traverse.md';
 import manipulation from './questions/manipulation.md';
-import animation from './questions/manipulation.md';
+import animation from './questions/animation.md';
 import contrast from './questions/contrast.md';
 
 export default {
