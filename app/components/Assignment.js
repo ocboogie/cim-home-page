@@ -12,7 +12,7 @@ export default class Assignment extends Component {
 
         return (
             <div>
-                <Jumbotron titleElement={<h1 className="display-5">{assignment.title}</h1>} />
+                <Jumbotron titleElement={<h1 className="display-3">{assignment.title}</h1>} />
                 <AssignmentElement />
             </div>
         );

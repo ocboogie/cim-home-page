@@ -4,7 +4,8 @@ var foo = ["a", "b", "c"];
 
 foo[n];
 
-foo[2]; // "c"
+foo[2];
+// "c"
 ```
 Always remember that arrays start counting at 0. So, `foo[1]` won't return `"a"`, it will return `"b"`:
 ```js

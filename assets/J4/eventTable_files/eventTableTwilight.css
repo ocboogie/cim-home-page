@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color: #415D7A;
+}
+
+table {
+	color : #222222;
+	width : 90%;
+	margin : auto;
+	background-color : #eeeeee;
+}
+
+tr:nth-child( even ) { background-color: rgba( 200, 200, 200, 100 ); }
+
+table, td, tr {
+	border : medium solid #CECECE;
+}
+
+
+
+/* tr p.testArea { background-color: "#6C9EC1";  !important } */

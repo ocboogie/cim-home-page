@@ -33,12 +33,12 @@ export default {
             {
                 title: 'From web page assignment, give and briefly describe an example of jQuery chaining.',
 
-                body: <MD md={select} />
+                body: <MD md={jQueryChaining} />
             },
             {
                 title: 'With jQuery how do you select more than one single ID element at a time?',
 
-                body: <MD md={jQueryChaining} />
+                body: <MD md={select} />
             },
             {
                 title: 'How do you avoid using document.write on a webpage?',
