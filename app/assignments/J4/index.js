@@ -26,7 +26,7 @@ export default {
         const assignments = [
             {
                 title: 'Create a form block that allows the user to enter their info.',
-                body: <div><a href="assets/H14/form.html">Here</a> is the link to the file</div>
+                body: <div><a href="assets/J4/eventTable.html">Here</a> is the link to the file</div>
             }
         ];
 

@@ -20,15 +20,19 @@ all events associated with Web Page elements have to be inside the $(document).r
 if they are not the system is not aware of their existence */
 
 $(document).ready(function () {
-	
-	$(document).scroll(function(e) {
-		console.log("scroll");
-	});
+
+	$(" tr:nth-child( even )").css("background-color", "blanchedalmond")
+
 	/** we can add these callback functions to ready event
 	 or can have bind methods outside of  the ready event handler 
-	  
-	$( "#testMouseClick" ).bind( "click", eventHandler ); */
+	 
+	 $( "#testMouseClick" ).bind( "click", eventHandler ); */
 	"use strict";
+
+	$(document).scroll(function (e) {
+		console.log("scroll");
+	});
+
 	$("#themes").change(function (e) {
 		//alert( "change themes" + e );
 		var cssTheme = $("#themes").find(":selected").text() + ".css";
@@ -65,7 +69,7 @@ $(document).ready(function () {
 
 	$("#testShow").bind("click", testShow);
 
-	$("#testToggle").bind("click", function() {
+	$("#testToggle").bind("click", function () {
 		$(".testArea#mouse").toggle();
 	});
 
@@ -158,6 +162,11 @@ $(document).ready(function () {
 
 
 		//alert( teams[i][1] );
+	});
+
+	console.log($("#blur"))
+	$("#blur").blur(function() {
+		$("#blur").append("<option>something</option>")
 	});
 
 	/* write  code for #testFormBlur - you need to add the blur to .testArea blur select drop down
